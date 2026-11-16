@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#09090f">
+<title>TikTok 100K Growth Hub</title>
+<style>
+:root{--bg:#09090f;--panel:#14141f;--panel2:#1b1b29;--line:#29293a;--text:#f7f7fb;--muted:#a4a4b7;--pink:#fe2c55;--cyan:#25f4ee;--green:#35d39a}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 90% 0%,#321324 0,transparent 30%),radial-gradient(circle at 0% 20%,#102b31 0,transparent 27%),var(--bg);color:var(--text);font:15px system-ui,-apple-system,Segoe UI,Roboto,Arial}
+.wrap{max-width:1050px;margin:auto;padding:22px 16px 50px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:24px}.brand{display:flex;align-items:center;gap:11px;font-weight:850;font-size:19px}.logo{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,var(--cyan),var(--pink));display:grid;place-items:center;color:#08080d;font-size:23px}.tag{border:1px solid #454052;border-radius:99px;padding:7px 11px;color:#d9d6e4;font-size:12px}
+.hero{padding:28px;border:1px solid #343044;border-radius:24px;background:linear-gradient(125deg,rgba(254,44,85,.16),rgba(37,244,238,.09)),#13131e;box-shadow:0 18px 55px #0005}
+.eyebrow{color:var(--cyan);font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}.hero h1{font-size:clamp(30px,6vw,48px);line-height:1.05;margin:10px 0}.hero p{color:var(--muted);max-width:650px;line-height:1.6;margin:0}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}.stat,.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px}.stat small{color:var(--muted)}.stat strong{display:block;font-size:25px;margin-top:6px}
+.grid{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;margin-top:16px}.card h2{font-size:18px;margin:0 0 15px}.field{margin:12px 0}.field label{display:block;font-size:13px;color:#d0cfdb;margin-bottom:7px}.field input{width:100%;background:#0d0d15;border:1px solid #39394d;border-radius:12px;padding:14px;color:white;font:inherit;outline:none}.field input:focus{border-color:var(--cyan)}.btn{border:0;border-radius:12px;padding:13px 17px;font-weight:800;font-size:14px;cursor:pointer;color:#08080e;background:linear-gradient(100deg,var(--cyan),#9cf8e9);width:100%}.btn.secondary{background:#252536;color:#eee;border:1px solid #3b3b50}.btn.danger{background:#3a1c28;color:#ff9bb0;border:1px solid #673044}.note{font-size:12px;line-height:1.55;color:var(--muted);margin-top:12px}.target{display:flex;justify-content:space-between;align-items:center;margin:12px 0 8px}.target b{font-size:22px}.track{height:12px;background:#29293a;border-radius:99px;overflow:hidden}.fill{height:100%;width:0;background:linear-gradient(90deg,var(--pink),var(--cyan));border-radius:99px;transition:width .25s}.progressline{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;margin-top:8px}
+.campaign{padding:14px;background:#101019;border:1px solid #303044;border-radius:14px;margin-top:10px}.campaign-head{display:flex;justify-content:space-between;gap:10px;align-items:center}.campaign a{color:var(--cyan);text-decoration:none;overflow-wrap:anywhere;font-size:12px}.pill{font-size:11px;padding:5px 8px;border-radius:99px;background:#17382f;color:#77e9bd}.empty{color:var(--muted);font-size:13px;padding:16px 0}.actions{display:flex;gap:8px;margin-top:12px}.actions button{flex:1}.footer{text-align:center;color:#77778c;font-size:12px;margin-top:25px}
+@media(max-width:720px){.grid{grid-template-columns:1fr}.stats{gap:8px}.stat{padding:13px}.stat strong{font-size:20px}.hero{padding:22px}.top{align-items:flex-start}.tag{font-size:10px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top"><div class="brand"><div class="logo">♪</div><span>TikTok Growth Hub</span></div><span class="tag">100K CAMPAIGN TARGET</span></header>
+  <section class="hero">
+    <div class="eyebrow">Plan • Promote • Measure</div>
+    <h1>Grow towards <span style="color:var(--cyan)">100,000</span> views.</h1>
+    <p>Organize TikTok video promotion campaigns and record genuine performance in one simple dashboard. A target is not a promise of views; results depend on audience, content and promotion.</p>
+  </section>
+  <section class="stats">
+    <div class="stat"><small>Campaigns</small><strong id="totalCampaigns">0</strong></div>
+    <div class="stat"><small>Recorded views</small><strong id="totalViews">0</strong></div>
+    <div class="stat"><small>100K targets reached</small><strong id="completed">0</strong></div>
+  </section>
+  <main class="grid">
+    <section class="card">
+      <h2>＋ Create a campaign</h2>
+      <form id="campaignForm">
+        <div class="field"><label for="videoUrl">TikTok video URL</label><input id="videoUrl" type="url" placeholder="https://www.tiktok.com/@username/video/..." required></div>
+        <div class="field"><label for="campaignName">Campaign name (optional)</label><input id="campaignName" maxlength="60" placeholder="My 100K growth campaign"></div>
+        <button class="btn" type="submit">Create 100K campaign</button>
+      </form>
+      <p class="note">This tool does not log in to TikTok, create accounts, send bot views, or fetch live TikTok analytics. Use TikTok's official Promote feature to advertise to real viewers.</p>
+    </section>
+    <section class="card">
+      <h2>Campaign progress</h2>
+      <div id="selectedEmpty" class="empty">Create or select a campaign to record its progress.</div>
+      <div id="progressPanel" hidden>
+        <div id="selectedName" style="font-weight:750;margin-bottom:6px"></div>
+        <a id="selectedLink" href="#" target="_blank" rel="noopener" style="color:var(--cyan);font-size:12px;overflow-wrap:anywhere">Open TikTok video ↗</a>
+        <div class="target"><span>Recorded views</span><b id="currentViews">0</b></div>
+        <div class="track"><div class="fill" id="progressFill"></div></div>
+        <div class="progressline"><span id="percent">0% of target</span><span>100,000 target</span></div>
+        <div class="field"><label for="viewsInput">Update with your latest real view count</label><input id="viewsInput" type="number" min="0" step="1" placeholder="Enter current total views"></div>
+        <button class="btn" id="updateViews" type="button">Save view count</button>
+        <p class="note" id="lastUpdated"></p>
+      </div>
+    </section>
+  </main>
+  <section class="card" style="margin-top:16px">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><h2 style="margin:0">Your campaigns</h2><button class="btn secondary" id="exportBtn" style="width:auto;padding:9px 12px">Export JSON</button></div>
+    <div id="campaignList"><div class="empty">No campaigns yet. Add your first TikTok video above.</div></div>
+    <div class="actions"><button class="btn secondary" id="clearBtn" type="button">Clear all campaigns</button></div>
+  </section>
+  <section class="card" style="margin-top:16px">
+    <h2>How to get real viewers</h2>
+    <ol style="color:var(--muted);line-height:1.8;padding-left:20px">
+      <li>Open your video in TikTok and choose <b style="color:white">Promote</b> if the feature is available for your account.</li>
+      <li>Choose your goal, audience, budget and campaign duration in TikTok.</li>
+      <li>Return here and update the view count to track progress towards 100K.</li>
+    </ol>
+    <a href="https://www.tiktok.com/business/en/promote" target="_blank" rel="noopener" style="color:var(--cyan)">TikTok Promote — official information ↗</a>
+  </section>
+  <div class="footer">Your campaign data is saved locally in this browser. This is an independent planning tool, not an official TikTok product.</div>
+</div>
+<script>
+const KEY='tt_growth_hub_campaigns_v1';
+let campaigns=JSON.parse(localStorage.getItem(KEY)||'[]');
+let selectedId=campaigns[0]?.id||null;
+const $=id=>document.getElementById(id);
+const fmt=n=>Number(n||0).toLocaleString();
+function save(){localStorage.setItem(KEY,JSON.stringify(campaigns));render()}
+function render(){
+ $('totalCampaigns').textContent=fmt(campaigns.length);
+ $('totalViews').textContent=fmt(campaigns.reduce((s,c)=>s+(Number(c.views)||0),0));
+ $('completed').textContent=fmt(campaigns.filter(c=>c.views>=100000).length);
+ const list=$('campaignList');list.innerHTML='';
+ if(!campaigns.length)list.innerHTML='<div class="empty">No campaigns yet. Add your first TikTok video above.</div>';
+ campaigns.forEach(c=>{
+  const el=document.createElement('div');el.className='campaign';
+  const head=document.createElement('div');head.className='campaign-head';
+  const title=document.createElement('strong');title.textContent=c.name||'TikTok campaign';
+  const badge=document.createElement('span');badge.className='pill';badge.textContent=c.views>=100000?'Target reached':'In progress';
+  head.append(title,badge);
+  const link=document.createElement('a');link.href=c.url;link.target='_blank';link.rel='noopener';link.textContent=c.url;
+  const info=document.createElement('div');info.className='progressline';info.innerHTML='<span>'+fmt(c.views)+' recorded views</span><span>'+Math.min(100,Math.floor(c.views/1000))+'% of 100K</span>';
+  const bar=document.createElement('div');bar.className='track';bar.style.marginTop='8px';const fill=document.createElement('div');fill.className='fill';fill.style.width=Math.min(100,c.views/1000)+'%';bar.append(fill);
+  const actions=document.createElement('div');actions.className='actions';
+  const select=document.createElement('button');select.className='btn secondary';select.textContent='View progress';select.onclick=()=>{selectedId=c.id;render()};
+  const del=document.createElement('button');del.className='btn danger';del.textContent='Delete';del.onclick=()=>{campaigns=campaigns.filter(x=>x.id!==c.id);if(selectedId===c.id)selectedId=campaigns[0]?.id||null;save()};
+  actions.append(select,del);el.append(head,link,info,bar,actions);list.append(el);
+ });
+ const c=campaigns.find(x=>x.id===selectedId);
+ $('selectedEmpty').hidden=!!c;$('progressPanel').hidden=!c;
+ if(c){$('selectedName').textContent=c.name||'TikTok campaign';$('selectedLink').href=c.url;$('currentViews').textContent=fmt(c.views);$('viewsInput').value=c.views;$('progressFill').style.width=Math.min(100,c.views/1000)+'%';$('percent').textContent=Math.min(100,(c.views/1000)).toFixed(1)+'% of target';$('lastUpdated').textContent=c.updated?'Last updated: '+new Date(c.updated).toLocaleString():'Not updated yet'}
+}
+$('campaignForm').addEventListener('submit',e=>{
+ e.preventDefault();const url=$('videoUrl').value.trim();
+ if(!/^https:\/\/(www\.|m\.)?tiktok\.com\//i.test(url)){alert('Please enter a valid TikTok video URL beginning with https://');return}
+ const c={id:Date.now().toString(),url,name:$('campaignName').value.trim(),views:0,created:new Date().toISOString(),updated:null};
+ campaigns.unshift(c);selectedId=c.id;$('campaignForm').reset();save();
+});
+$('updateViews').onclick=()=>{const c=campaigns.find(x=>x.id===selectedId);if(!c)return;const v=Number($('viewsInput').value);if(!Number.isSafeInteger(v)||v<0){alert('Enter a valid non-negative whole number.');return}c.views=v;c.updated=new Date().toISOString();save()};
+$('clearBtn').onclick=()=>{if(confirm('Delete all locally saved campaigns?')){campaigns=[];selectedId=null;save()}};
+$('exportBtn').onclick=()=>{const blob=new Blob([JSON.stringify(campaigns,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='tiktok-growth-campaigns.json';a.click();URL.revokeObjectURL(a.href)};
+render();
+</script>
+</body>
+</html>
